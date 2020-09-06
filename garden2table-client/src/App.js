@@ -5,6 +5,8 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import './App.css';
+import VeggieCard from './components/VeggieCard'
+import VeggieContainer from './containers/VeggieContainer';
 class App extends Component {
   
     state = { 
@@ -16,7 +18,7 @@ componentDidMount() {
     this.loginStatus()
   }
 loginStatus = () => {
-    axios.get('http://localhost:3000/logged_in', {withCredentials: true})
+    axios.get('http://localhost:3001/logged_in', {withCredentials: true})
     .then(response => {
       if (response.data.logged_in) {
         this.handleLogin(response)
@@ -61,6 +63,22 @@ render() {
               <Signup {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>
               )}
             />
+              <Route 
+              exact path='/veggiecard ' 
+              render={props => (
+              <VeggieCard {...props}/>
+              )}
+              />
+
+              <Route 
+              exact path='/veggiecontainer' 
+              render={props => (
+              <VeggieContainer {...props}/>
+              )}
+              />
+              
+
+            
           </Switch>
         </BrowserRouter>
       </div>
