@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import VeggieCard from '../components/VeggieCard'
+import Search from '../components/Search'
 
 export default class VeggieContainer extends Component {
 
     state={
-        veggiesArray: []
+        veggiesArray: [],
+        searchTerm : ""
     }
 
     componentDidMount(){
@@ -16,18 +18,29 @@ export default class VeggieContainer extends Component {
     fetch('http://localhost:3001/vegetables')
     .then(resp => resp.json())
     .then(veggies => this.setState({veggiesArray: veggies}))
-    
-    
-}
+    }
 
+    // getSoloVeggie=()=>{
+    //     fetch(`http://localhost:3001/vegetables/${vegetable.id}`)
+    //     .then(resp => resp.json())
+    //     .then(veggies => this.setState({veggiesArray: veggies}))
+    //     }
 
+    filteredVeggies=()=>{
+        return this.state.veggiesArray.filter((singleVeggie)=> singleVeggie.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
+    }
+
+    onChange=(e)=>{
+        this.setState({searchTerm:e.target.value})
+    }
 
 
 
 render() {
-        let veggieCard = this.state.veggiesArray.map(soloVeggie => <VeggieCard key={soloVeggie.id} soloVeggie={soloVeggie}/>)
+        let veggieCard = this.filteredVeggies().map(soloVeggie => <VeggieCard key={soloVeggie.id} soloVeggie={soloVeggie}/>)
         return (
             <div>
+                <Search value={this.state.searchTerm} onChange={this.onChange}/>
                {veggieCard}
             </div>
         )
