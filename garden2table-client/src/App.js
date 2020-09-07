@@ -6,6 +6,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import './App.css';
 import VeggieCard from './components/VeggieCard'
+import Veggie from './components/Veggie'
 import VeggieContainer from './containers/VeggieContainer';
 class App extends Component {
   
@@ -76,6 +77,14 @@ render() {
               <VeggieContainer {...props}/>
               )}
               />
+
+               <Route 
+              exact path='/veggie/id'
+              render={props => (
+              <Veggie {...props}/>
+              )}
+              />
+              
               
 
             
