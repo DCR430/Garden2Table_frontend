@@ -15,7 +15,7 @@ return (
    <>
     <div class="title">
         <h1>Garden 2 Table</h1>
-        <p>Grow . Harvest. Enjoy</p>
+        <p>Grow . Harvest . Enjoy</p>
     </div>
     <div class="buttons"> 
         <Link to='/login'><button class="left" >Log In</button></Link>

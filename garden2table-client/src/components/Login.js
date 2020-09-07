@@ -71,9 +71,7 @@ return (
             value={password}
             onChange={this.handleChange}
           />
-          <button placeholder="submit" type="submit">
-            Log In
-          </button>
+         <Link to="/veggiecontainer"> <button placeholder="submit" type="submit">Log In</button></Link>
           <div>
            or <Link to='/signup'> Please Sign Up</Link>
           </div>

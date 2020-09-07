@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 // import './App.css';
 class Signup extends Component {
   
@@ -84,9 +85,7 @@ return (
             onChange={this.handleChange}
           />
         
-          <button placeholder="submit" type="submit">
-            Sign Up
-          </button>
+          <Link to="/login"><button placeholder="submit" type="submit">Sign Up</button></Link>
       
         </form>
         <div>

@@ -20,13 +20,18 @@ export default class VeggieContainer extends Component {
     .then(veggies => this.setState({veggiesArray: veggies}))
     }
 
+   
+   
     // getSoloVeggie=()=>{
     //     fetch(`http://localhost:3001/vegetables/${vegetable.id}`)
     //     .then(resp => resp.json())
-    //     .then(veggies => this.setState({veggiesArray: veggies}))
+    //     .then(singleVeggie => this.setState({veggie: singleVeggie}))
     //     }
 
-    filteredVeggies=()=>{
+   
+   
+   
+     filteredVeggies=()=>{
         return this.state.veggiesArray.filter((singleVeggie)=> singleVeggie.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
     }
 
