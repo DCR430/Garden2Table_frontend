@@ -25,7 +25,7 @@ class VegetablePage extends React.Component {
                     ? (
                         <>
                             <h1>{veggieToDisplay.name}</h1>
-                            <img src={veggieToDisplay.image} alt={veggieToDisplay.name} />
+                            <img style={{width: "90px", height: "80px"}} src={veggieToDisplay.image} alt={veggieToDisplay.name} />
                             <div>{veggieToDisplay.facts}</div>
                         </>
                     ) : (

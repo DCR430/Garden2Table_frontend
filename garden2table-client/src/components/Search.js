@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
+import Vegetable from './Vegetable'
 
 export default class Search extends Component {
-    render() {
+ 
+   
+
+    
+
+
+        render() {
+            // let allVegs = this.filterVeg().map(singleVeg => <Vegetable key={singleVeg.id} singleVeggie={singleVeg} />)
         return (
             <div>
                
-                <input onChange={this.props.onChange}type="text" placeholder={"Search"}/>
+                <input onChange={this.onChange}type="text" placeholder={"Search"}/>
 
                 
             </div>

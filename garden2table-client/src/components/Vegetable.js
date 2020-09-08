@@ -6,20 +6,27 @@ import Search from './Search';
 
 
 
+
+
 const Vegetable = props => {
-    // console.log(props)
     let { match, veggies} = props;
-    const filteredVeggies=()=>{
-        return this.props.veggies.filter((singleVeggie)=> singleVeggie.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
-    }
+
+  
+
+   
+
+    
     return (
                     
         <div>
-            <Search/>
+          
+       
+    
+          {/* <Search veggies={this.state.veggies}  /> */}
             <Switch>
                 <Route 
                     exact path={`${match.path}`} 
-                    render={() => <> {filteredVeggies.map(veg => <VegetableCard key={veg.id} {...veg} match={props.match} push={props.history.push}/>)} </>}
+                    render={() => <> {veggies.map(veg => <VegetableCard key={veg.id} {...veg} match={props.match} push={props.history.push} />)} </>}
                 />
                 <Route path={`${match.path}/:id`} render={routerProps => <VegetablePage {...routerProps} veggies={veggies}/>} />
             </Switch>
