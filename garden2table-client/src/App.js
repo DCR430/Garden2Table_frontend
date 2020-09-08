@@ -14,7 +14,8 @@ class App extends Component {
     state = { 
       isLoggedIn: false,
       user: {},
-      veggies:[]
+      veggies:[],
+      searchTerm:""
      };
   
 componentDidMount() {
@@ -63,7 +64,7 @@ render() {
             <Route exact path='/'  render={props => (<Home {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>)}/>
             <Route exact path='/login' render={props => ( <Login {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>)}/>
             <Route exact path='/signup' render={props => (<Signup {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>)}/>
-            <Route  path='/vegetable' render={(routerProps) => <Vegetable veggies={this.state.veggies} {...routerProps}/>}/>
+            <Route  path='/vegetable' render={(routerProps) => <Vegetable veggies={this.state.veggies} {...routerProps} search={this.state.searchTerm}/>}/>
             {/* <Route exact path='/vegetable/:id' render={props => (<VegetablePage {...props}/>)}/> */}
          </Switch>
         </BrowserRouter>
