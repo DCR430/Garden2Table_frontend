@@ -33,7 +33,7 @@ componentDidMount() {
   }
 
   getVeggies=()=>{
-    fetch('http://localhost:3001/vegetables').then(r => r.json()).then(veg => {
+    fetch('http://localhost:3000/vegetable').then(r => r.json()).then(veg => {
       this.allVeggies = veg;
       return this.setState({veggies : veg})
     })
