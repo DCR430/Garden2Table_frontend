@@ -11,8 +11,10 @@ import Search from './components/Search';
 import './App.css';
 import VegetableCard from './components/VegetableCard';
 
+
 class App extends Component {
-  
+    allVegies;
+
     state = { 
       isLoggedIn: false,
       user: {},
@@ -31,7 +33,10 @@ componentDidMount() {
   }
 
   getVeggies=()=>{
-    fetch('http://localhost:3001/vegetables').then(r => r.json()).then(veg => this.setState({veggies : veg}))
+    fetch('http://localhost:3001/vegetables').then(r => r.json()).then(veg => {
+      this.allVeggies = veg;
+      return this.setState({veggies : veg})
+    })
   }
 
 
@@ -59,12 +64,20 @@ handleLogout = () => {
     })
   }
 
+  filteredVeggies = (event) => {
+   
+    let filtered = [...this.state.veggies].filter((veggie) => {
+      return veggie.name.toLowerCase().includes(event.toLowerCase());
+    })
+    this.setState({veggies: event.length === 0 ? this.allVeggies : filtered})
+  }
+
 
 render() {
   
     return (
       <div>
-         <Search veggies={this.state.veggies}  />
+         <Search onChange={this.filteredVeggies} veggies={this.state.veggies}  />
        
         <BrowserRouter>
           <Switch>
