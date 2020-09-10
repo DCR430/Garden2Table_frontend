@@ -1,19 +1,29 @@
+.body {
+
+background-color: lightseagreen;
+
+  
+}
 
 .title {
+
   position: fixed;
   top: 50%;
   left: 50%;
   margin-top: -50px;
   margin-left: -100px;
+
+
+
 }
 
 .title > p {
+
   position: fixed;
   top: 58%;
   left: 50%;
   margin-top: -50px;
   margin-left: -75px;
-
 }
 
 .form{
@@ -49,6 +59,70 @@
   height: 40vmin;
   pointer-events: none;
 }
+
+.veggiecard{
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  margin-top: 5%;
+
+  }
+
+  .img{
+    border-radius:5px 20px 5px ;
+    border: solid;
+    border-color:teal ;
+    padding: 10px;
+  }   
+  
+  .SearchBar {
+    top: 355px;
+    left: 575px;
+    height: 30px;
+    width: 300px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: grey;
+}
+.garden{
+  position:relative;
+    width:1075px;
+    height:350px;
+    background-image:url("https://www.pennington.com/-/media/Images/Pennington2-NA/US/blog/fertilizer/what-is-fish-fertilizer/fish-fertilizer-og.jpg");
+    background-position: center;
+    /* width: 400px;
+    height: 400px; */
+    background-size: auto;
+  
+  
+   
+ }
+
+
+
+.garden-title{
+  text-align: center;
+  margin-top: 10%;
+}
+
+.veggiecard > div{
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  font-size: medium;
+  text-align: center;
+  
+  }
+
+.button{
+  
+  /* margin-right:5px; */
+  display: inline-block;
+  
+ 
+
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

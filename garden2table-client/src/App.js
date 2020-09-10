@@ -9,7 +9,7 @@ import Vegetable from './components/Vegetable';
 import Search from './components/Search';
 
 import './App.css';
-import VegetableCard from './components/VegetableCard';
+// import VegetableCard from './components/VegetableCard';
 
 
 class App extends Component {
@@ -72,6 +72,15 @@ handleLogout = () => {
     this.setState({veggies: event.length === 0 ? this.allVeggies : filtered})
   }
 
+  favoriteClickHandler = (id) => {
+    let newArray = [...this.state.veggies]
+    let foundObj = newArray.find((vegObj) => vegObj.id === id)
+    foundObj.favorite = false
+
+    this.setState({ veggies: newArray }, () => window.alert("I got a hot sauce in my bag, swag"))
+
+  }
+
 
 render() {
   
@@ -84,8 +93,9 @@ render() {
             <Route exact path='/'  render={props => (<Home {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>)}/>
             <Route exact path='/login' render={props => ( <Login {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>)}/>
             <Route exact path='/signup' render={props => (<Signup {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>)}/>
-            <Route  path='/vegetable' render={(routerProps) => <Vegetable veggies={this.state.veggies} {...routerProps}/>}/>
+            <Route  path='/vegetable' render={(routerProps) => <Vegetable veggies={this.state.veggies} gardenClickHandler={this.favoriteClickHandler} {...routerProps}/>}/>
             {/* <Route exact path='/vegetable/:id' render={props => (<VegetablePage {...props}/>)}/> */}
+            {/* <Garden veggies={veggies} gardenClick={gardenClickHandler}/> */}
          </Switch>
         </BrowserRouter>
       </div>

@@ -12,13 +12,13 @@ const handleClick = () => {
     .catch(error => console.log(error))
   }
 return (
-   <>
+   <div class="home">
     <div class="title">
         <h1>Garden 2 Table</h1>
         <p>Grow . Harvest . Enjoy</p>
     </div>
     <div class="buttons"> 
-        <Link to='/login'><button class="left" >Log In</button></Link>
+        <Link to='/login'><button class="ui button" class="left" >Log In</button></Link>
         <br></br>
         <Link to='/signup'><button class="right">Sign Up</button></Link>
         <br></br>
@@ -28,7 +28,7 @@ return (
          null
         }
     </div>
-</>
+  </div>
   );
 };
 export default Home;

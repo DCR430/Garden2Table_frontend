@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Vegetable from './Vegetable'
+// import Vegetable from './Vegetable'
 
 export default class Search extends Component {
  
@@ -16,7 +16,7 @@ export default class Search extends Component {
         return (
             <div>
                
-                <input value={this.state.value.value} onChange={(e) => {this.props.onChange(e.target.value)}} type="text" placeholder={"Search"}/>
+                <input class="SearchBar"  value={this.state.value.value} onChange={(e) => {this.props.onChange(e.target.value)}} type="text" placeholder={"Search"}/>
 
                 
             </div>
