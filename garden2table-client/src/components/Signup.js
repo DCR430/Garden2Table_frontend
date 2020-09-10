@@ -85,7 +85,7 @@ return (
             onChange={this.handleChange}
           />
         
-          <Link to="/login"><button placeholder="submit" type="submit">Sign Up</button></Link>
+          <Link to="/"><button placeholder="submit" type="submit">Sign Up</button></Link>
       
         </form>
         <div>

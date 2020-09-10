@@ -7,6 +7,10 @@ import Signup from './components/Signup'
 import Vegetable from './components/Vegetable';
 // import VegetablePage from './components/VegetablePage';
 import Search from './components/Search';
+import { Container } from 'semantic-ui-react';
+import Garden from './components/Garden';
+
+
 
 import './App.css';
 // import VegetableCard from './components/VegetableCard';
@@ -19,7 +23,8 @@ class App extends Component {
       isLoggedIn: false,
       user: {},
       veggies:[],
-      searchTerm:""
+      favorite: false,
+      likes: 0
      };
   
 componentDidMount() {
@@ -75,30 +80,58 @@ handleLogout = () => {
   favoriteClickHandler = (id) => {
     let newArray = [...this.state.veggies]
     let foundObj = newArray.find((vegObj) => vegObj.id === id)
-    foundObj.favorite = false
+    foundObj.favorite = true
 
-    this.setState({ veggies: newArray }, () => window.alert("I got a hot sauce in my bag, swag"))
+    this.setState({ veggies: newArray })
 
+  }
+
+  likesHandler = (vegId, likes) => {
+    let updatedLike = {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        likes: likes + 1
+      })
+    }
+    fetch(`http://localhost:3000/vegetable/${vegId}`, updatedLike)
+    .then(resp => resp.json())
+    .then(newLikes => {
+      let newLikesArray = this.state.veggies.map(veg => {
+        if(veg.id === vegId) {
+          return newLikes
+        }
+        return veg
+      })
+      this.setState({veggies: newLikesArray })
+    })
   }
 
 
 render() {
   
     return (
+       
       <div>
          <Search onChange={this.filteredVeggies} veggies={this.state.veggies}  />
        
         <BrowserRouter>
+            {/* <Search onChange={this.filteredVeggies} veggies={this.state.veggies}  /> */}
           <Switch>
             <Route exact path='/'  render={props => (<Home {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>)}/>
             <Route exact path='/login' render={props => ( <Login {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>)}/>
             <Route exact path='/signup' render={props => (<Signup {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>)}/>
-            <Route  path='/vegetable' render={(routerProps) => <Vegetable veggies={this.state.veggies} gardenClickHandler={this.favoriteClickHandler} {...routerProps}/>}/>
+            <Route  path='/vegetable' render={(routerProps) => <Vegetable veggies={this.state.veggies} gardenClickHandler={this.favoriteClickHandler} likedRecipe={this.likesHandler} favorite={this.state.favorite} likes={this.state.likes}{...routerProps}/>}/>
             {/* <Route exact path='/vegetable/:id' render={props => (<VegetablePage {...props}/>)}/> */}
             {/* <Garden veggies={veggies} gardenClick={gardenClickHandler}/> */}
+            {/* <Garden veggies={this.state.veggies}/> */}
          </Switch>
         </BrowserRouter>
       </div>
+  
     );
   }
 }

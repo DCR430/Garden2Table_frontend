@@ -9,7 +9,7 @@ import Garden from './Garden';
 
 
 const Vegetable = props => {
-    let { match, veggies, gardenClickHandler} = props;
+    let { match, veggies, gardenClickHandler,favorite, likedRecipe,likes} = props;
 
   
 
@@ -30,13 +30,13 @@ const Vegetable = props => {
             <Switch>
                 <Route 
                     exact path={`${match.path}`} 
-                    render={() => <> {veggies.map(veg => <VegetableCard key={veg.id} {...veg} match={props.match} push={props.history.push} />)} </>}
+                    render={() => <> {veggies.map(veg => <VegetableCard key={veg.id} {...veg} match={props.match} push={props.history.push}/>)} </>}
                 />
-                <Route path={`${match.path}/:id`} render={routerProps => <VegetablePage {...routerProps} veggies={veggies}/>} />
+                <Route path={`${match.path}/:id`} render={routerProps => <VegetablePage {...routerProps} veggies={veggies} likedRecipe={likedRecipe} liked={likes} />} />
             </Switch>
         </div>
         <div>
-              <Garden veggies={veggies} gardenClick={gardenClickHandler}/>
+              <Garden veggie={props.veggies}/>
         </div>
         <div class="garden">
 

@@ -8,10 +8,10 @@ const VegetableCard = props => {
     return (
         <div>
            
-            <img  class="img"style={{width: "100px", height: "100px"}} src={image} alt={name} />
+            <img  class="img"style={{width: "120px", height: "120px"}} src={image} alt={name} />
             <p>{name}</p>
-        <button size="tiny" class="ui button" onClick={() => push(`${props.match.path}/${id}`)}>Details!</button>
-        <button size="tiny" class="ui button">Add to Garden!</button>
+        <button class="ui black basic button" onClick={() => push(`${props.match.path}/${id}`)}>Recipes!</button>
+        <button class="ui black basic button">Add to Garden!</button>
         </div> 
     )
 }
