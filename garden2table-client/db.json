@@ -281,28 +281,116 @@
       "name": "Eggplant",
       "image": "https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/eggplant.png",
       "facts": "Eggplant is a source of dietary fibre. It also contains phytonutrients, particularly the phenolic compounds such as anthocyanins and phenolic acids.",
-      "favorite": "false"
+      "favorite": "false",
+      "recipes": [
+        {
+          "title": "Eggplant Dip",
+          "ingredients": "2 large eggplant, peeled and diced, cloves garlic, peeled, large red pepper, diced, jalapeno pepper cut in half (optional), red onion, roughly chopped, tablespoons extra virgin olive oil, divided,teaspoons fresh thyme leaves, teaspoon tomato paste, fresh basil leaves, fresh parsley, tablespoon honey, Juice of ½ a lemon, Salt and pepper to taste",
+          "instructions": "Preheat oven to 425°F. On a large sheet pan, combine eggplant, garlic, peppers and onion. Drizzle with 1 Tbsp olive oil and thyme; season with salt, pepper and toss gently. Roast for 25-35 minutes, turning once until vegetables are slightly golden and tender- set aside to cool slightly. Transfer eggplant mixture to a food processor fitted with a steel blade; add remaining oil, tomato paste, herbs, honey and lemon juice. Pulse until just combined. Serve at room temperature with whole wheat pita chips and cucumber slices for dipping or spread on crackers and sandwiches.",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "title": "Eggplant Chips",
+          "ingredients": "eggplant, favorite cooking spray",
+          "instructions": "Line a baking sheet with a silicone mat; coat generously with cooking spray. Slice a firm Japanese eggplant 1/16 to 1/8 inch thick using a mandoline. Arrange on the baking sheet in a single layer; coat the eggplant with cooking spray and sprinkle with salt. Bake at 250 degrees F, 50 minutes, rotating the baking sheet halfway through. Flip the slices; continue baking until browned, about 20 more minutes. Transfer the chips to a rack to cool.",
+          "likes": 0,
+          "dislikes": 0
+        }
+      ]
     },
     {
       "id": 14,
       "name": "Potatoes",
       "image": "https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/potatoes.png",
       "facts": "They are a good source of vitamin C, a source of dietary fibre, folate, niacin, pantothenic acid, thiamin and magnesium, and contain potassium. The coloured skin and flesh varieties contain higher levels of phytonutrients.",
-      "favorite": "false"
+      "favorite": "false",
+      "recipes": [
+        {
+          "title": "Hasselback Potatoes ",
+          "ingredients": "russett potatoes, (1 stick) butter, softened, extra-virgin olive oil, finely chopped chives , kosher salt and freshly ground black pepper ",
+          "instructions": "Preheat oven to 450 degrees F. Stir together butter, olive oil, chives and some salt and pepper in a small bowl. Place a potato between handles of 2 wooden spoons or 2 chopsticks. Slice potato into thin slices, leaving 1/4 inch at bottom unsliced; spoon handles will prevent you from slicing potato all the way through. Repeat with remaining potatoes.Put potatoes on a baking sheet and brush on butter mixture, making sure to get in between all slices. Bake until tender and crisp, 55 to 60 minutes. ",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "title": "Melting Potatoes",
+          "ingredients": "russet potatoes, kosher salt and freshly cracked black pepper, vegetable oil, unsalted butter,low-sodium chicken broth, fresh rosemary, garlic.  ",
+          "instructions": "Preheat oven to 400 degrees F. Peel potatoes and slice off ends. Cut into 1-inch slices. Season both sides of potatoes generously with kosher salt and pepper. Heat a cast-iron skillet (or other heavy-duty, ovenproof skillet) over medium-high heat. Add oil and 4 tablespoons of butter. Sear potatoes on one side until golden brown, about 4 minutes. Flip potatoes and add broth, rosemary and garlic. Cut remaining 6 tablespoons butter into cubes and scatter on top of potatoes. Transfer skillet to oven and cook until fork-tender, about 30 minutes. Garnish with flaky salt and spoon pan sauce all over potatoes. ",
+          "likes": 0,
+          "dislikes": 0
+        }
+      ]
     },
     {
       "id": 15,
       "name": "Cucumber",
       "image": "https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/cucumber.png",
       "facts": "Cucumbers provide almost twice the amount of vitamin C and vitamin A compared to other varieties. Peeling cucumbers reduces the dietary fibre content slightly. Cucumbers have a high water content.",
-      "favorite": "false"
+      "favorite": "false",
+      "recipes": [
+        {
+          "title": " Cucumber Juice",
+          "ingredients": " fresh ginger, peeled and chopped, cucumber, peeled and chopped ",
+          "instructions": " In a blender or food processor, blend together ginger, cucumber and 1/2 cup cold water. Strain and press puree through a mesh sieve. Serve over ice and garnish with a lemon and cucumber wheel. ",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "title": " Cucumber Cocktail",
+          "ingredients": " 1 cup cucumber vodka, 1 cup tonic water, 1/2 cup cucumber juice, 1/4 cup fresh lime juice, 1/4 cup simple syrup (equal amounts sugar and water heated until sugar dissolves; cool), Handful fresh mint leaves",
+          "instructions": " Divide the ingredients in half, add each half to a cocktail shaker and shake to combine. Pour over rocks glasses filled with ice and serve.",
+          "likes": 0,
+          "dislikes": 0
+        }
+      ]
     },
     {
       "id": 16,
       "name": "Tomatoes",
       "image": "https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/tomatoes.png",
       "facts": "Tomatoes are a good source of vitamin C and a source of vitamin A (from beta-carotene) and contain a dietary significant amount of potassium. Tomatoes contain many different phytonutrients; the most well-known being the carotenoid lycopene, responsible for the red colour.",
-      "favorite": "false"
+      "favorite": "false",
+      "recipes": [
+        {
+          "title": "Tomato Cucumber Salad",
+          "ingredients": "plum tomatoes, halved lengthwise, seeded, and thinly sliced, red onion, peeled, halved lengthwise, and thinly sliced, cucumber, halved lengthwise and thinly sliced, extra-virgin olive oil, about 2 tablespoons, red wine vinegar. Coarse salt and black pepper",
+          "instructions": "Dress the tomatoes, onions, and cucumber with olive oil, red wine vinegar, salt, and pepper. Let stand while you prepare dinner, about 20 minutes. Re-toss and serve salad with crusty bread for mopping up juices and oil.",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "title": "Tomato Bruschetta",
+          "ingredients": "5plum tomatoes, diced small, garlic, finely chopped, extra-virgin olive oil, red pepper flakes, fresh basil leaves, sliced into ribbons, balsamic vinegar, 1/2 baguette, sliced into 1/2-inch rounds (about 14 slices)",
+          "instructions": " Preheat oven to 350 degrees F. Add tomatoes, garlic, 3 tablespoons extra-virgin olive oil, red pepper flakes, basil and balsamic vinegar to a bowl. Season with salt and pepper. Let sit at room temperature while you toast the bread. Slice bread and add to a baking sheet in a single layer. Toast in oven until golden brown about 5 minutes. Top bread with tomatoes and drizzle with remaining extra-virgin olive oil right before serving. ",
+          "likes": 0,
+          "dislikes": 0
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Spinach",
+      "image": "https://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/spinach2.png",
+      "facts": "A good source of both nutrients and phytonutrients. It is a good source of folate, vitamin K, vitamin A (in the form of beta-carotene), a source of iron, magnesium, and contains a dietary significant amount of potassium. It is also low in energy (kilojoules).",
+      "favorite": "false",
+      "recipes": [
+        {
+          "title": "Sauteed Spinach", 
+        "ingredients": "spinach, garlic, olive oil, salt & pepper",
+        "instructions": "Heat olive oil and saute garlic over medium heat for about 1 minute. Add all the spinach, the salt, and pepper to the pot, toss it with the garlic and oil, cover pot. Cook it for 2 minutes then serve",
+        "likes": 8,
+        "dislikes" : 0
+        },
+        {
+          "title": "Easy Cheesy Spianch", 
+        "ingredients": "spinach, unsalted butter, diced white onion, grated nutmeg, salt & pepper",
+        "instructions": "Heat the butter in a 12-inch saute pan over moderate heat. Add the onions and cook until soft, about 8 minutes. Whisk in the cream cheese and let melt. Fold in the spinach until evenly combined. Add up to 3 tablespoons water if the mixture seems too dry. Sprinkle the nutmeg on top and season with salt and pepper.",
+        "likes": 7,
+        "dislikes" : 3
+        }
+      ]
     }
   ]
+  
 }
