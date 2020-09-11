@@ -12,19 +12,22 @@ class Vegetable extends Component {
             gardenVeggies: []
         }
 
-        this.addToGardenArr = this.addToGardenArr.bind(this);
+        // this.addToGardenArr = this.addToGardenArr.bind(this);
     }
 
     addToGarden = (veggie) => {
-        
-        this.state.gardenVeggies.push(veggie);
+        let newVeg = veggie
+        this.setState({
+            gardenVeggies: [...this.state.gardenVeggies, newVeg]
+        })
+        // this.state.gardenVeggies.push(veggie);
         // setVeggies(veggie);
         // console.log('setState', setVeggies)
         console.log("clicked",this.state.gardenVeggies)
         console.log("state",this.state)
     }
 
-    addToGardenArr = () => this.state.gardenVeggies;
+    // addToGardenArr = () => this.state.gardenVeggies;
 
     render() {
         return (
@@ -47,8 +50,11 @@ class Vegetable extends Component {
                     </Switch>
                     </div>
                     <div>
-                    <Garden veggies={this.addToGardenArr()}/>
-                    veggies: {this.addToGardenArr()[0]}
+                    <Garden veggies={this.state.gardenVeggies}/>
+                   
+                    </div>
+                    <div class="garden">
+
                     </div>
             </div>
         )
