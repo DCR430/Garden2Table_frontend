@@ -50,7 +50,7 @@ class Vegetable extends Component {
                     </Switch>
                     </div>
                     <div>
-                    <Garden veggies={this.state.gardenVeggies}/>
+                    <Garden veggies={this.state.gardenVeggies} addToGarden={this.addToGarden}/>
                    
                     </div>
                     <div class="garden">

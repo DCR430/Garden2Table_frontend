@@ -116,10 +116,10 @@ render() {
     return (
        
       <div>
-         <Search onChange={this.filteredVeggies} veggies={this.state.veggies}  />
        
         <BrowserRouter>
             {/* <Search onChange={this.filteredVeggies} veggies={this.state.veggies}  /> */}
+        <Route  path='/vegetable' render={(routerProps) => <Search onChange={this.filteredVeggies} veggies={this.state.veggies} {...routerProps} />}/>
           <Switch>
             <Route exact path='/'  render={props => (<Home {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>)}/>
             <Route exact path='/login' render={props => ( <Login {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>)}/>

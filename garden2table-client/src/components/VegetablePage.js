@@ -68,7 +68,7 @@ class VegetablePage extends React.Component {
             </div>
             <br></br>
             <div class="nutrition">
-              <h2>Why {veggieToDisplay.name} is good for you!</h2>
+              <h2>The benefits of {veggieToDisplay.name}, and why its good for you!</h2>
               <h4>{veggieToDisplay.facts}</h4>
             </div>
             <div class="recipe">

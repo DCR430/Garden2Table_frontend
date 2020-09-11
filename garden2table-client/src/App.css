@@ -1,11 +1,71 @@
 
-  .home{
-   background-image: url("https://image.shutterstock.com/image-photo/fruit-vegetable-borders-260nw-183455636.jpg");
-   margin-top: 40%;
-   width:3000%;
-   height: 100%;
-   background-position:center;
+  .landing{
+    background-image: url("https://cdn.nohat.cc/thumb/f/720/comrawpixel5903.jpg");
+    background-repeat: no-repeat;
  
+    
+    position:absolute;
+
+      top:0px;
+     right:50%; 
+    bottom:0px;
+    left:0x;
+    position:absolute;
+    top:100px;
+    right:0%;
+    bottom:50px;
+    left:0px;  
+    display: inline-block;
+    width: 100%;
+ 
+    line-height: 0;
+    vertical-align: middle;
+    background-size: 100%;
+    background-position: 50% 50%;
+    margin-bottom: 20px;
+   
+  
+ 
+ 
+  }
+  .a{
+    color:black;
+  }
+
+  .orSign{
+    margin-top: 10px;
+    color:white;
+  }
+
+  .login{
+    background-image: url("https://cdn.nohat.cc/thumb/f/720/comrawpixel5903.jpg");
+    background-repeat: no-repeat;
+ 
+    
+  
+
+      top:0px;
+     right:50%; 
+    bottom:0px;
+    left:0x;
+    position:absolute;
+    top:100px;
+    right:0%;
+    bottom:50px;
+    left:0px;  
+    display: inline-block;
+    width: 100%;
+ 
+    line-height: 0;
+    vertical-align: middle;
+    background-size: 100%;
+    background-position: 50% 50%;
+    margin-bottom: 20px;
+   
+  
+ 
+ 
+
   }
 
   .nutrition{
@@ -24,6 +84,10 @@
   left: 50%;
   margin-top: -50px;
   margin-left: -100px;
+  color: white;
+  font-size-adjust: inherit;
+  
+
   
 
 
@@ -55,6 +119,7 @@
   position: fixed;
   top: 55%;
   left: 55%;
+  
 
 }
 
@@ -81,6 +146,15 @@
   
 
   }
+
+  .veggie{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    overflow-x: scroll;
+    
+  
+    }
 
   .body {
     margin: 0;
@@ -124,8 +198,8 @@
     height: 400px; */
     background-size: auto;
     bottom: 5%;
-   margin-top: 20%;
-   
+   margin-top: 0%;
+  
     
   
   

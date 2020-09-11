@@ -60,6 +60,7 @@ redirect = () => {
 render() {
     const {username, password, password_confirmation} = this.state
 return (
+  <div class="login">
       <div class="title">
         <h1>Sign Up</h1>
        <form  class="signup-form" onSubmit={this.handleSubmit}>
@@ -94,6 +95,7 @@ return (
           }
         </div>
       </div>
+     </div>
     );
   }
 }

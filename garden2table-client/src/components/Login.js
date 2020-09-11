@@ -54,6 +54,7 @@ handleErrors = () => {
 render() {
     const {username, password} = this.state
 return (
+  <div class="login">
       <div class="title">
         <h1>Log In</h1>
         <form class="form"onSubmit={this.handleSubmit}>
@@ -72,8 +73,8 @@ return (
             onChange={this.handleChange}
           />
          <Link to="/vegetable"> <button placeholder="submit" type="submit">Log In</button></Link>
-          <div>
-           or <Link to='/signup'> Please Sign Up</Link>
+          <div class="orSign">
+           or <Link to='/signup'> <button>Please Sign Up</button></Link>
           </div>
           
         </form>
@@ -83,6 +84,7 @@ return (
           }
         </div>
       </div>
+    </div>
     );
   }
 }
