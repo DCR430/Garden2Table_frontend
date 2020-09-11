@@ -11,7 +11,7 @@ const VegetableCard = props => {
             <img  class="img"style={{width: "120px", height: "120px"}} src={image} alt={name} />
             <p>{name}</p>
         <button class="ui black basic button" onClick={() => push(`${props.match.path}/${id}`)}>Recipes!</button>
-        <button class="ui black basic button">Add to Garden!</button>
+        <button class="ui black basic button" onClick={()=>props.addToGarden(props)}>Add to Garden!</button>
         </div> 
     )
 }
